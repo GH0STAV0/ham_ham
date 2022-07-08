@@ -18,6 +18,8 @@ git pull
 cd /headless/SDA_ALL/addel_02/
 chmod +x *
 pwd
+python3 run_run.py
+curl ipinfo.io
 while true
 do
 	echo "NEW ..............."
