@@ -42,7 +42,10 @@ ADD ./addon/ $INST_SCRIPTS/
 RUN find $INST_SCRIPTS -name '*.sh' -exec chmod a+x {} +
 ################## Envrionment config ##########################################
 WORKDIR $HOME
+RUN df
 RUN $INST_SCRIPTS/package.sh
+RUN df
+
 RUN echo "hi"
 RUN $INST_SCRIPTS/package_2.sh
 RUN $INST_SCRIPTS/package_3.sh
