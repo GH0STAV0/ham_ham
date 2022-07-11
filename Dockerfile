@@ -43,6 +43,7 @@ RUN find $INST_SCRIPTS -name '*.sh' -exec chmod a+x {} +
 ################## Envrionment config ##########################################
 WORKDIR $HOME
 RUN $INST_SCRIPTS/package.sh
+RUN echo "hi"
 RUN $INST_SCRIPTS/package_2.sh
 RUN $INST_SCRIPTS/package_3.sh
 ADD ./etc/ /etc/
